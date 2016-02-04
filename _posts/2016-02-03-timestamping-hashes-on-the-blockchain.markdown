@@ -35,7 +35,7 @@ Alternatively, putting the hash of a document in the blockchain means you, or so
 
 The blockchain is expensive. Decentralization is a tough business. It takes a lot of resources for each node within a trustless network to come to a complete consensus on what data exists in the blockchain. You must pay the network for every byte in a transaction, and that can make document storage quite expensive.
 
-Addtionally, putting everything in the blockchain means anyone, anywhere can read it at any time - by computing the hash and sticking that in the blockchain instead, the contents of your document remain completely private.
+Additionally, putting everything in the blockchain means anyone, anywhere can read it at any time - by computing the hash and sticking that in the blockchain instead, the contents of your document remain completely private.
 
 ### Why timestamping hashes?
 
@@ -47,7 +47,7 @@ It's up to the user, but with our current email API to sign documents with a PGP
 
 ### Is Eternity Wall storing the documents?
 
-Eternity Wall only keeps your documents for as long as it takes to compute the hash. They are deleted immediatly after the hash is computed.
+Eternity Wall only keeps your documents for as long as it takes to compute the hash. They are deleted immediately after the hash is computed.
 
 However attachments in emails are readable during transit across the internet, so if you are really concerned about flawless privacy you should encrypt your data or wait for our client-side hashing service, which will be available soon.
 
