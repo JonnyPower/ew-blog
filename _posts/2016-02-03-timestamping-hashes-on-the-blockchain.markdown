@@ -7,7 +7,7 @@ author:     "Riccardo"
 
 ## Timestamping hashes on the blockchain
 
-You can now hash documents and commit on the blockchain simply sending an email with attachments at:
+You can now hash documents and commit them to the blockchain simply by sending an email:
 
 <h4>
 <div class="alert alert-info center-block text-center" role="alert">
@@ -15,38 +15,41 @@ You can now hash documents and commit on the blockchain simply sending an email 
 </div>
 </h4>
 
-*A hash of a document in the blockchain is a proof of existence of the document in a certain point in time.*
+*A hash of a document in the blockchain acts as a proof of existence of the document at a certain point in time.*
 
-Beware that this feature is out in **Beta**, and there is one commitment per day.
+Beware that this feature is only in **Beta** right now, as such we only commit document hashes once a day.
 
 ### Let me know the details
 
-At Eternity Wall we think putting hash of data in the blockchain and putting the data themselves are two completely different things.
+At Eternity Wall we recognise that there is a big difference between putting an entire document in the blockchain and putting a hash of a document in the blockchain.
 
 ### Data in the blockchain
 
-By putting all the data in the blockchain, you get the same property of the blockchain:  eternity, uncensorability, indipendence and proof of time.
-The network take care of data at the price of the network fee for including the transaction.
+By putting the entire document in the blockchain, you get eternal storage, uncensorability, independence and a provable creation date.
 
-### Hash of Data in the blockchain
+### Hash of data in the blockchain
 
-When you put a hash of some data in the blockchain you have a commitment of the data in the blockchain. Your data is timestamped only if you or someone you trust keeping the real data. You are losing indipendence, uncensorability and eternity.
+Alternatively, putting the hash of a document in the blockchain means you, or somebody you trust, has to keep the original document around so you can still have a provable creation date. You are losing the independent, uncensorable and eternal properties of the blockchain, right?
 
-### So, why not putting everything on the blockchain?
+### So, why should I not just put everything on the blockchain?
 
-Because the blockchain is expensive. Decentralization is a tough business, coming to consensus and mantaining the data structure require that network nodes use a lot of resources.
+The blockchain is expensive. Decentralization is a tough business. It takes a lot of resources for each node within a trustless network to come to a complete consensus on what data exists in the blockchain. You must pay the network for every byte in a transaction, and that can make document storage quite expensive.
+
+Addtionally, putting everything in the blockchain means anyone, anywhere can read it at any time - by computing the hash and sticking that in the blockchain instead, the contents of your document remain completely private.
 
 ### Why timestamping hashes?
 
-Because they scale without requiring one transaction for every hash. With a structure called merkle tree a lot of hashes could commit on a single one. You need to write in the blockchain only the tree root hash to make a commitment for every hash composing the tree.
+The merkle tree data structure means you can create a tree of multiple hashes representing a file and simply commit the root hash to the blockchain. The hash in the root of the tree acts as proof of each hash within the tree's branches. This makes it even cheaper, as you only have to commit a single hash.
 
 ### What about ownership?
 
-With the current API working with email is already possible to sign documents but it's up to the user. You can digitally sign your email with PGP or with the Estonian E-residency before sending.
+It's up to the user, but with our current email API to sign documents with a PGP key or an Estonian E-residency to prove ownership.
 
 ### Is Eternity Wall storing the documents?
 
-Eternity Wall is not storing the document after computing the hash. However attachments in email are readable during their travel, if you are concerned about privacy you can encrypt your data or wait for the client hashing service, soon available.
+Eternity Wall only keeps your documents for as long as it takes to compute the hash. They are deleted immediatly after the hash is computed.
+
+However attachments in emails are readable during transit across the internet, so if you are really concerned about flawless privacy you should encrypt your data or wait for our client-side hashing service, which will be available soon.
 
 ### Try it now, it's free :)
 
