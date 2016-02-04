@@ -15,7 +15,7 @@ You can now hash documents and commit them to the blockchain simply by sending a
 </div>
 </h4>
 
-*A hash of a document in the blockchain acts a proof of existence of the document at a certain point in time.*
+*A hash of a document in the blockchain acts as a proof of existence of the document at a certain point in time.*
 
 Beware that this feature is only in **Beta** right now, as such we only commit document hashes once a day.
 
